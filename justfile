@@ -1,6 +1,10 @@
 default:
 	just --list --unsorted
 
+alias gtc := gen-test-case
+alias rp := release-pr
+alias pt := push-tag
+
 fmt:
 	cargo fmt --all
 	taplo fmt
@@ -25,3 +29,6 @@ release-pr tag:
 push-tag tag:
 	git tag {{tag}}
 	git push origin {{tag}}
+
+gen-test-case:
+	cargo run --package xtask --bin gen_test_case

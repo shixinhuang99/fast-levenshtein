@@ -10,5 +10,11 @@ documentation = "https://docs.rs/fast-levenshtein"
 license = "MIT"
 categories = ["algorithms"]
 keywords = ["levenshtein"]
+include = ["Cargo.toml", "/README.md", "/LICENSE", "src/**"]
 
-[dependencies]
+[dev-dependencies]
+levenshtein = "1.0.5"
+strsim = "0.10.0"
+
+[workspace]
+members = ["xtask"]
