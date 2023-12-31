@@ -68,4 +68,5 @@ jobs:
       - name: Test code
         run: |
           rustup target add ${{ matrix.target }}
+          just gtc
           cargo test --target ${{ matrix.target }}
