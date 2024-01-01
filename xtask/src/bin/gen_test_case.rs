@@ -1,11 +1,11 @@
-use std::{
-	fs,
-	iter::repeat_with,
-	path::{Path, PathBuf},
-};
+use std::{fs, iter::repeat_with, path::Path};
 
 fn main() {
-	let file = PathBuf::from_iter(["tmp", "test_case.txt"]);
+	let tmp_dir = Path::new("tmp");
+	if !tmp_dir.exists() {
+		fs::create_dir(tmp_dir).unwrap();
+	}
+	let file = tmp_dir.join("test_case.txt");
 	wirte(&file);
 }
 
