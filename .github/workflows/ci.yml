@@ -65,6 +65,10 @@ jobs:
         with:
           shared-key: ${{ runner.os }}
 
+      - name: Install just
+        run: |
+          cargo +stable install just
+
       - name: Test code
         run: |
           rustup target add ${{ matrix.target }}
