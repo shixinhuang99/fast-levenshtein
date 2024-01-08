@@ -1,22 +1,22 @@
 default:
 	just --list --unsorted
 
-alias gtc := gen-test-case
 alias rp := release-pr
 alias pt := push-tag
+alias gtc := gen-test-case
 
 fmt:
 	cargo fmt --all
 	taplo fmt
 
 lint: fmt
-	cargo clippy --all-targets --all-features
+	cargo clippy --all-targets --all-features --workspace
 
 check:
 	cargo fmt --all -- --check
 	taplo fmt --check
-	cargo check --all-targets --all-features
-	cargo clippy --all-targets --all-features -- -D warnings
+	cargo check --all-targets --all-features --workspace
+	cargo clippy --all-targets --all-features --workspace -- -D warnings
 
 release-pr tag:
 	git checkout -b "release-{{tag}}"

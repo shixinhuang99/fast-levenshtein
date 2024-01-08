@@ -5,12 +5,11 @@ edition = "2021"
 authors = ["shixinhuang99 <shixinhuang99@gmail.com>"]
 description = "Levenshtein algorithm"
 repository = "https://github.com/shixinhuang99/fast-levenshtein"
-homepage = "https://github.com/shixinhuang99/fast-levenshtein"
 documentation = "https://docs.rs/fast-levenshtein"
 license = "MIT"
 categories = ["algorithms"]
 keywords = ["levenshtein"]
-include = ["Cargo.toml", "/README.md", "/LICENSE", "src/**"]
+include = ["Cargo.toml", "README.md", "LICENSE", "src/**"]
 
 [dev-dependencies]
 levenshtein = "1.0.5"

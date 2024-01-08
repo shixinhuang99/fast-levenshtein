@@ -6,7 +6,7 @@ fn main() {
 		fs::create_dir(tmp_dir).unwrap();
 	}
 	let file = tmp_dir.join("test_case.txt");
-	wirte(&file);
+	write(&file);
 }
 
 fn rand_str(len: usize) -> String {
@@ -21,7 +21,7 @@ fn rand_str_arr(len: usize) -> Vec<String> {
 	arr
 }
 
-fn wirte(file: &Path) {
+fn write(file: &Path) {
 	let mut test_case = Vec::new();
 
 	for len in [4, 8, 16, 32, 64, 128, 256, 512, 1024] {
