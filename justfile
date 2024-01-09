@@ -4,10 +4,12 @@ default:
 alias rp := release-pr
 alias pt := push-tag
 alias gtc := gen-test-case
+alias bbn := build-binding-node
 
 fmt:
 	cargo fmt --all
 	taplo fmt
+	npm run fmt
 
 lint: fmt
 	cargo clippy --all-targets --all-features --workspace
@@ -32,3 +34,6 @@ push-tag tag:
 
 gen-test-case:
 	cargo run --package xtask --bin gen_test_case
+
+build-binding-node:
+	npm run build

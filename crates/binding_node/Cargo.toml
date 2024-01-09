@@ -1,0 +1,16 @@
+[package]
+name = "binding_node"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+fast_levenshtein = { workspace = true }
+napi = "2.14.2"
+napi-derive = "2.14.6"
+
+[build-dependencies]
+napi-build = "2.1.0"

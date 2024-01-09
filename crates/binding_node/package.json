@@ -1,0 +1,44 @@
+{
+  "name": "@shixinhuang/fast-levenshtein",
+  "version": "0.0.1",
+  "description": "Levenshtein algorithm",
+  "repository": "https://github.com/shixinhuang99/fast-levenshtein",
+  "license": "MIT",
+  "keywords": [
+    "N-API",
+    "levenshtein"
+  ],
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "fast-levenshtein",
+    "package": {
+      "name": "@shixinhuang/fast-levenshtein"
+    },
+    "triples": {
+      "defaults": true
+    }
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "fmt": "prettier . --write",
+    "prepublishOnly": "napi prepublish --skip-gh-release",
+    "new": "napi new"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.17.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  }
+}

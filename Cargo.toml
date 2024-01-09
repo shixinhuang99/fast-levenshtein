@@ -1,19 +1,11 @@
-[package]
-name = "fast-levenshtein"
-version = "0.1.0"
-edition = "2021"
-authors = ["shixinhuang99 <shixinhuang99@gmail.com>"]
-description = "Levenshtein algorithm"
-repository = "https://github.com/shixinhuang99/fast-levenshtein"
-documentation = "https://docs.rs/fast-levenshtein"
-license = "MIT"
-categories = ["algorithms"]
-keywords = ["levenshtein"]
-include = ["Cargo.toml", "README.md", "LICENSE", "src/**"]
-
-[dev-dependencies]
-levenshtein = "1.0.5"
-strsim = "0.10.0"
-
 [workspace]
-members = ["xtask"]
+members = ["xtask", "crates/*"]
+resolver = "2"
+default-members = ["crates/core"]
+
+[workspace.dependencies]
+fast_levenshtein = { path = "crates/core" }
+
+[profile.release]
+lto = true
+strip = true

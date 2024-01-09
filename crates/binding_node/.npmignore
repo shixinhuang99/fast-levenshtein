@@ -1,0 +1,5 @@
+npm
+*.node
+Cargo.toml
+src
+build.rs

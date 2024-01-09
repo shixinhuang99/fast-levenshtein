@@ -1,0 +1,16 @@
+{
+  "name": "package-root",
+  "version": "0.0.1",
+  "description": "package-root",
+  "repository": "https://github.com/shixinhuang99/fast-levenshtein",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "fmt": "npm run fmt --workspaces",
+    "artifacts": "npm run artifacts --workspace=@shixinhuang/fast-levenshtein",
+    "build": "npm run build --workspace=@shixinhuang/fast-levenshtein"
+  },
+  "workspaces": [
+    "crates/binding_node"
+  ]
+}
