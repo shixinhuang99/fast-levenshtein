@@ -9,7 +9,6 @@ alias bbn := build-binding-node
 fmt:
 	cargo fmt --all
 	taplo fmt
-	npm run fmt
 
 lint: fmt
 	cargo clippy --all-targets --all-features --workspace
